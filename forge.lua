@@ -1,4 +1,4 @@
--- 🎄 FREE CHRISTMAS PICKAXE HACK
+-- ⚡ RAPID CLICK AUTOCLICKER
 -- ⚠️ FOR EDUCATIONAL PURPOSES ONLY
 
 local Players = game:GetService("Players")
@@ -7,20 +7,20 @@ local CoreGui = game:GetService("CoreGui")
 
 -- تنظيف
 for _, gui in pairs(CoreGui:GetChildren()) do
-    if gui.Name == "XmasPickaxeHack" then
+    if gui.Name == "RapidClicker" then
         gui:Destroy()
     end
 end
 
--- واجهة صغيرة للموبايل
+-- واجهة صغيرة
 local gui = Instance.new("ScreenGui")
-gui.Name = "XmasPickaxeHack"
+gui.Name = "RapidClicker"
 gui.Parent = CoreGui
 
 local frame = Instance.new("Frame")
-frame.Size = UDim2.new(0, 250, 0, 180)
+frame.Size = UDim2.new(0, 220, 0, 200)
 frame.Position = UDim2.new(0.1, 0, 0.2, 0)
-frame.BackgroundColor3 = Color3.fromRGB(30, 50, 40)
+frame.BackgroundColor3 = Color3.fromRGB(40, 40, 60)
 frame.BorderSizePixel = 0
 frame.Parent = gui
 
@@ -55,12 +55,12 @@ frame.InputChanged:Connect(function(input)
 end)
 
 local title = Instance.new("TextLabel")
-title.Text = "🎄 FREE XMAS PICKAXE"
+title.Text = "⚡ RAPID CLICKER (اسحبني)"
 title.Size = UDim2.new(1, 0, 0, 25)
-title.BackgroundColor3 = Color3.fromRGB(200, 0, 50)
+title.BackgroundColor3 = Color3.fromRGB(0, 150, 200)
 title.TextColor3 = Color3.new(1, 1, 1)
 title.Font = Enum.Font.SourceSansBold
-title.TextSize = 13
+title.TextSize = 12
 title.Parent = frame
 
 -- البحث عن زر الشراء
@@ -91,234 +91,227 @@ findBtn.Position = UDim2.new(0.05, 0, 0.2, 0)
 findBtn.BackgroundColor3 = Color3.fromRGB(0, 120, 215)
 findBtn.TextColor3 = Color3.new(1, 1, 1)
 findBtn.Font = Enum.Font.SourceSansBold
-findBtn.TextSize = 12
+findBtn.TextSize = 11
 findBtn.Parent = frame
 
--- زر الشراء المجاني
-local freeBuyBtn = Instance.new("TextButton")
-freeBuyBtn.Text = "💰 BUY FOR FREE"
-freeBuyBtn.Size = UDim2.new(0.9, 0, 0, 35)
-freeBuyBtn.Position = UDim2.new(0.05, 0, 0.4, 0)
-freeBuyBtn.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
-freeBuyBtn.TextColor3 = Color3.new(1, 1, 1)
-freeBuyBtn.Font = Enum.Font.SourceSansBold
-freeBuyBtn.TextSize = 13
-freeBuyBtn.Parent = frame
+-- زر تشغيل الضغط السريع
+local rapidBtn = Instance.new("TextButton")
+rapidBtn.Text = "⚡ START RAPID CLICK"
+rapidBtn.Size = UDim2.new(0.9, 0, 0, 35)
+rapidBtn.Position = UDim2.new(0.05, 0, 0.4, 0)
+rapidBtn.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
+rapidBtn.TextColor3 = Color3.new(1, 1, 1)
+rapidBtn.Font = Enum.Font.SourceSansBold
+rapidBtn.TextSize = 12
+rapidBtn.Parent = frame
+
+-- تعديل السرعة
+local speedLabel = Instance.new("TextLabel")
+speedLabel.Text = "سرعة الضغط: 100/ثانية"
+speedLabel.Size = UDim2.new(0.9, 0, 0, 20)
+speedLabel.Position = UDim2.new(0.05, 0, 0.65, 0)
+speedLabel.BackgroundTransparency = 1
+speedLabel.TextColor3 = Color3.new(1, 1, 1)
+speedLabel.Font = Enum.Font.SourceSans
+speedLabel.TextSize = 11
+speedLabel.Parent = frame
+
+-- زيادة السرعة
+local speedUpBtn = Instance.new("TextButton")
+speedUpBtn.Text = "➕ زيادة السرعة"
+speedUpBtn.Size = UDim2.new(0.44, 0, 0, 25)
+speedUpBtn.Position = UDim2.new(0.05, 0, 0.72, 0)
+speedUpBtn.BackgroundColor3 = Color3.fromRGB(60, 80, 100)
+speedUpBtn.TextColor3 = Color3.new(1, 1, 1)
+speedUpBtn.Font = Enum.Font.SourceSans
+speedUpBtn.TextSize = 10
+speedUpBtn.Parent = frame
+
+-- تقليل السرعة
+local speedDownBtn = Instance.new("TextButton")
+speedDownBtn.Text = "➖ تقليل السرعة"
+speedDownBtn.Size = UDim2.new(0.44, 0, 0, 25)
+speedDownBtn.Position = UDim2.new(0.51, 0, 0.72, 0)
+speedDownBtn.BackgroundColor3 = Color3.fromRGB(60, 80, 100)
+speedDownBtn.TextColor3 = Color3.new(1, 1, 1)
+speedDownBtn.Font = Enum.Font.SourceSans
+speedDownBtn.TextSize = 10
+speedDownBtn.Parent = frame
 
 -- النتائج
 local resultBox = Instance.new("TextLabel")
-resultBox.Text = "👉 اضغط FIND أولاً"
-resultBox.Size = UDim2.new(0.9, 0, 0, 50)
-resultBox.Position = UDim2.new(0.05, 0, 0.65, 0)
-resultBox.BackgroundColor3 = Color3.fromRGB(40, 60, 50)
+resultBox.Text = "👉 ابحث عن الزر أولاً"
+resultBox.Size = UDim2.new(0.9, 0, 0, 40)
+resultBox.Position = UDim2.new(0.05, 0, 0.85, 0)
+resultBox.BackgroundColor3 = Color3.fromRGB(30, 40, 50)
 resultBox.TextColor3 = Color3.new(1, 1, 1)
 resultBox.TextWrapped = true
 resultBox.Font = Enum.Font.SourceSans
-resultBox.TextSize = 11
+resultBox.TextSize = 10
 resultBox.Parent = frame
 
 -- متغيرات
 local buyButton = nil
-local originalConnections = {}
+local isClicking = false
+local clicksPerSecond = 100
+local totalClicks = 0
 
 -- البحث عن الزر
 findBtn.MouseButton1Click:Connect(function()
-    resultBox.Text = "🔍 جاري البحث عن زر الشراء..."
+    resultBox.Text = "🔍 جاري البحث..."
     
     buyButton = findBuyButton()
     
     if buyButton then
         resultBox.Text = "✅ وجدت زر الشراء!\n"
-        resultBox.Text = resultBox.Text .. "📍 " .. buyButton:GetFullName()
-        freeBuyBtn.Text = "💰 BUY FOR FREE (جاهز)"
-        freeBuyBtn.BackgroundColor3 = Color3.fromRGB(0, 200, 0)
+        resultBox.Text = resultBox.Text .. "📍 " .. buyButton.Name
+        rapidBtn.Text = "⚡ START RAPID CLICK"
+        rapidBtn.BackgroundColor3 = Color3.fromRGB(0, 200, 0)
     else
         resultBox.Text = "❌ ما لقيت الزر\n"
-        resultBox.Text = resultBox.Text .. "🔍 افتح متجر الكريسماس أولاً"
-        freeBuyBtn.Text = "💰 BUY FOR FREE"
-        freeBuyBtn.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
+        resultBox.Text = resultBox.Text .. "🔍 افتح المتجر أولاً"
+        rapidBtn.Text = "⚡ START RAPID CLICK"
+        rapidBtn.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
     end
 end)
 
--- شراء ببلاش
-freeBuyBtn.MouseButton1Click:Connect(function()
+-- دالة الضغط السريع
+local function rapidClick()
+    if not buyButton then
+        resultBox.Text = "❌ ما فيش زر!"
+        return
+    end
+    
+    resultBox.Text = "⚡ بدأ الضغط السريع...\n"
+    resultBox.Text = resultBox.Text .. "سرعة: " .. clicksPerSecond .. "/ثانية\n"
+    
+    local startTime = tick()
+    local clicksThisSecond = 0
+    local secondStart = tick()
+    
+    while isClicking do
+        -- التحقق من الوقت
+        local currentTime = tick()
+        
+        -- إذا مرت ثانية، نبدأ عداد جديد
+        if currentTime - secondStart >= 1 then
+            clicksThisSecond = 0
+            secondStart = currentTime
+            resultBox.Text = "⚡ سرعة: " .. clicksPerSecond .. "/ثانية\n"
+            resultBox.Text = resultBox.Text .. "🔄 كليكات: " .. totalClicks
+        end
+        
+        -- إذا وصلنا للسرعة المحددة، ننتظر
+        if clicksThisSecond >= clicksPerSecond then
+            task.wait(0.01) -- انتظار قصير
+            continue
+        end
+        
+        -- الضغط على الزر
+        pcall(function()
+            if buyButton:IsA("TextButton") or buyButton:IsA("ImageButton") then
+                -- طريقة 1: Fire click event
+                buyButton:Fire("click")
+                
+                -- طريقة 2: MouseButton1Click events
+                for _, event in pairs(getconnections(buyButton.MouseButton1Click) or {}) do
+                    pcall(function()
+                        event:Fire()
+                    end)
+                end
+                
+                -- طريقة 3: تغيير الـ Text مؤقتاً للإيهام بالضغط
+                local originalText = buyButton.Text
+                buyButton.Text = "⚡..."
+                task.wait(0.01)
+                buyButton.Text = originalText
+            end
+        end)
+        
+        clicksThisSecond = clicksThisSecond + 1
+        totalClicks = totalClicks + 1
+        
+        -- تأخير بين الضغطات حسب السرعة
+        local delay = 1 / clicksPerSecond
+        if delay > 0.001 then -- لا تقل عن 1ms
+            task.wait(delay)
+        end
+        
+        -- تحديث العداد كل 50 ضغطة
+        if totalClicks % 50 == 0 then
+            resultBox.Text = "⚡ سرعة: " .. clicksPerSecond .. "/ثانية\n"
+            resultBox.Text = resultBox.Text .. "🔄 كليكات: " .. totalClicks
+        end
+    end
+    
+    local elapsedTime = tick() - startTime
+    resultBox.Text = "✅ توقف الضغط!\n"
+    resultBox.Text = resultBox.Text .. "⏱️ الوقت: " .. math.floor(elapsedTime) .. " ثانية\n"
+    resultBox.Text = resultBox.Text .. "🔄 إجمالي الكليكات: " .. totalClicks
+end
+
+-- تشغيل/إيقاف الضغط السريع
+rapidBtn.MouseButton1Click:Connect(function()
     if not buyButton then
         resultBox.Text = "❌ ابحث عن الزر أولاً!"
         return
     end
     
-    resultBox.Text = "🎄 جاري الشراء ببلاش...\n"
-    
-    -- الطريقة 1: تعطيل الزر الأصلي وإضافة زر جديد
-    if getconnections then
-        -- حفظ الوصلات الأصلية
-        local connections = getconnections(buyButton.MouseButton1Click)
-        originalConnections = connections
+    if isClicking then
+        -- إيقاف الضغط
+        isClicking = false
+        rapidBtn.Text = "⚡ START RAPID CLICK"
+        rapidBtn.BackgroundColor3 = Color3.fromRGB(0, 200, 0)
+        resultBox.Text = "⏹️ توقف الضغط..."
+    else
+        -- بدء الضغط
+        isClicking = true
+        rapidBtn.Text = "⏹️ STOP CLICKING"
+        rapidBtn.BackgroundColor3 = Color3.fromRGB(255, 150, 0)
         
-        -- تعطيلها
-        for _, conn in pairs(connections) do
-            conn:Disable()
-        end
-        
-        resultBox.Text = resultBox.Text .. "⚡ عطلت الوظيفة الأصلية\n"
-    end
-    
-    -- إضافة وظيفة جديدة
-    local newConnection = buyButton.MouseButton1Click:Connect(function()
-        resultBox.Text = resultBox.Text .. "🛒 تم النقر على الزر المخترق\n"
-        
-        -- بيانات الشراء المزورة
-        local fakeData = {
-            itemName = "ChristmasPickaxe",
-            itemId = "xmas_pickaxe_2024",
-            price = 0,  -- ⭐ السعر صفر!
-            originalPrice = 999,  -- السعر الأصلي (للإظهار فقط)
-            currency = "ROBUX",
-            playerId = player.UserId,
-            shopType = "ChristmasEvent",
-            receipt = "FREE_XMAS_" .. os.time() .. "_" .. math.random(1000, 9999),
-            timestamp = os.time()
-        }
-        
-        -- إرسال لجميع Remotes المحتملة
-        local remoteCount = 0
-        
-        -- البحث عن RemoteEvents
-        for _, remote in pairs(game:GetDescendants()) do
-            if remote:IsA("RemoteEvent") then
-                local remoteName = remote.Name:lower()
-                if remoteName:find("purchase") or 
-                   remoteName:find("buy") or 
-                   remoteName:find("shop") or
-                   remoteName:find("christmas") then
-                    
-                    pcall(function()
-                        remote:FireServer(fakeData)
-                        remote:FireServer("PurchaseItem", fakeData)
-                        remote:FireServer("BuyChristmasItem", fakeData)
-                        remoteCount = remoteCount + 1
-                    end)
-                end
-            end
-        end
-        
-        -- البحث عن RemoteFunctions
-        for _, remote in pairs(game:GetDescendants()) do
-            if remote:IsA("RemoteFunction") then
-                local remoteName = remote.Name:lower()
-                if remoteName:find("purchase") or remoteName:find("buy") then
-                    pcall(function()
-                        remote:InvokeServer(fakeData)
-                        remoteCount = remoteCount + 1
-                    end)
-                end
-            end
-        end
-        
-        resultBox.Text = resultBox.Text .. "📤 أرسلت لـ " .. remoteCount .. " Remote\n"
-        
-        -- محاولة فتح نافذة شراء حقيقية (لكن بالسعر 0)
-        task.wait(0.1)
-        
-        -- البحث عن MarketplaceService
-        pcall(function()
-            local MarketplaceService = game:GetService("MarketplaceService")
-            -- تحقق من وجود منتج
-            local productInfo = MarketplaceService:GetProductInfo(123456)  -- ID مؤقت
-            resultBox.Text = resultBox.Text .. "🛍️ جربت فتح متجر\n"
+        -- بدء الضغط في thread منفصل
+        spawn(function()
+            rapidClick()
         end)
-    end)
-    
-    -- حفظ الـ Connection للتعديل لاحقاً
-    buyButton:SetAttribute("HackedConnection", newConnection)
-    
-    -- النقر التلقائي على الزر (اختياري)
-    resultBox.Text = resultBox.Text .. "🔄 جرب النقر التلقائي...\n"
-    
-    for i = 1, 3 do
-        pcall(function()
-            buyButton:Fire("click")
-            resultBox.Text = resultBox.Text .. i .. ". نقرت تلقائياً\n"
-        end)
-        task.wait(0.2)
     end
-    
-    resultBox.Text = resultBox.Text .. "\n✅ الزر جاهز! اضغط عليه في المتجر"
-    
-    -- إضافة زر للاختبار المباشر
-    local testBuyBtn = Instance.new("TextButton")
-    testBuyBtn.Text = "🛒 TEST DIRECT BUY"
-    testBuyBtn.Size = UDim2.new(0.9, 0, 0, 25)
-    testBuyBtn.Position = UDim2.new(0.05, 0, 1.1, 0)
-    testBuyBtn.BackgroundColor3 = Color3.fromRGB(255, 150, 0)
-    testBuyBtn.TextColor3 = Color3.new(1, 1, 1)
-    testBuyBtn.Visible = false
-    testBuyBtn.Parent = frame
-    
-    testBuyBtn.MouseButton1Click:Connect(function()
-        -- محاولة شراء مباشرة بدون فتح المتجر
-        resultBox.Text = "🎯 جربة شراء مباشر...\n"
-        
-        local directPurchase = {
-            productId = "christmas_pickaxe",
-            price = 0,
-            player = player,
-            forcePurchase = true,
-            bypassCheck = true
-        }
-        
-        -- البحث عن متجر الكريسماس
-        local christmasShop = player.PlayerGui:FindFirstChild("ChristmasEventShop")
-        if christmasShop then
-            resultBox.Text = resultBox.Text .. "🏪 متجر الكريسماس موجود\n"
-            
-            -- البحث عن Remote في المتجر
-            for _, remote in pairs(christmasShop:GetDescendants()) do
-                if remote:IsA("RemoteEvent") then
-                    pcall(function()
-                        remote:FireServer(directPurchase)
-                        resultBox.Text = resultBox.Text .. "📤 أرسلت للمتجر\n"
-                    end)
-                end
-            end
-        end
-        
-        resultBox.Text = resultBox.Text .. "✅ انتهت المحاولة"
-    end)
-    
-    testBuyBtn.Visible = true
 end)
 
--- زر إرجاع الزر لطبيعته
-local restoreBtn = Instance.new("TextButton")
-restoreBtn.Text = "🔄 RESTORE BUTTON"
-restoreBtn.Size = UDim2.new(0.9, 0, 0, 25)
-restoreBtn.Position = UDim2.new(0.05, 0, 0.85, 0)
-restoreBtn.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
-restoreBtn.TextColor3 = Color3.new(1, 1, 1)
-restoreBtn.Font = Enum.Font.SourceSans
-restoreBtn.TextSize = 11
-restoreBtn.Parent = frame
-
-restoreBtn.MouseButton1Click:Connect(function()
-    if buyButton then
-        -- إرجاع الوصلات الأصلية
-        if #originalConnections > 0 then
-            for _, conn in pairs(originalConnections) do
-                conn:Enable()
-            end
-        end
-        
-        -- إزالة الـ Connection المخترق
-        local hackedConn = buyButton:GetAttribute("HackedConnection")
-        if hackedConn then
-            hackedConn:Disconnect()
-        end
-        
-        resultBox.Text = "✅ أرجعت الزر لطبيعته"
-        freeBuyBtn.Text = "💰 BUY FOR FREE"
-        freeBuyBtn.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
+-- زيادة السرعة
+speedUpBtn.MouseButton1Click:Connect(function()
+    if clicksPerSecond < 500 then -- حد أقصى 500/ثانية
+        clicksPerSecond = clicksPerSecond + 10
+        speedLabel.Text = "سرعة الضغط: " .. clicksPerSecond .. "/ثانية"
+        resultBox.Text = "📈 السرعة: " .. clicksPerSecond .. "/ثانية"
+    else
+        resultBox.Text = "⚠️ السرعة القصوى: 500/ثانية"
     end
+end)
+
+-- تقليل السرعة
+speedDownBtn.MouseButton1Click:Connect(function()
+    if clicksPerSecond > 10 then -- حد أدنى 10/ثانية
+        clicksPerSecond = clicksPerSecond - 10
+        speedLabel.Text = "سرعة الضغط: " .. clicksPerSecond .. "/ثانية"
+        resultBox.Text = "📉 السرعة: " .. clicksPerSecond .. "/ثانية"
+    else
+        resultBox.Text = "⚠️ السرعة الدنيا: 10/ثانية"
+    end
+end)
+
+-- زر إعادة الضبط
+local resetBtn = Instance.new("TextButton")
+resetBtn.Text = "🔄 RESET COUNTER"
+resetBtn.Size = UDim2.new(0.9, 0, 0, 25)
+resetBtn.Position = UDim2.new(0.05, 0, 0.58, 0)
+resetBtn.BackgroundColor3 = Color3.fromRGB(100, 100, 120)
+resetBtn.TextColor3 = Color3.new(1, 1, 1)
+resetBtn.Font = Enum.Font.SourceSans
+resetBtn.TextSize = 10
+resetBtn.Parent = frame
+
+resetBtn.MouseButton1Click:Connect(function()
+    totalClicks = 0
+    resultBox.Text = "🔄 عداد الكليكات: 0"
 end)
 
 -- زر إغلاق
@@ -331,6 +324,7 @@ closeBtn.TextColor3 = Color3.new(1, 1, 1)
 closeBtn.Parent = frame
 
 closeBtn.MouseButton1Click:Connect(function()
+    isClicking = false
     gui:Destroy()
 end)
 
@@ -344,14 +338,64 @@ spawn(function()
         resultBox.Text = "✅ زر الشراء موجود!\n"
         resultBox.Text = resultBox.Text .. "👉 اضغط FIND للتأكيد"
         buyButton = tempButton
+        rapidBtn.BackgroundColor3 = Color3.fromRGB(0, 200, 0)
     else
         resultBox.Text = "❌ الزر مش موجود\n"
-        resultBox.Text = resultBox.Text .. "🔍 افتح متجر الكريسماس أولاً"
+        resultBox.Text = resultBox.Text .. "🔍 افتح المتجر أولاً"
     end
 end)
 
+-- كليكات شبحية (خيار إضافي)
+local ghostBtn = Instance.new("TextButton")
+ghostBtn.Text = "👻 GHOST CLICKS"
+ghostBtn.Size = UDim2.new(0.9, 0, 0, 25)
+ghostBtn.Position = UDim2.new(0.05, 0, 0.78, 0)
+ghostBtn.BackgroundColor3 = Color3.fromRGB(80, 60, 100)
+ghostBtn.TextColor3 = Color3.new(1, 1, 1)
+ghostBtn.Font = Enum.Font.SourceSans
+ghostBtn.TextSize = 10
+ghostBtn.Parent = frame
+
+ghostBtn.MouseButton1Click:Connect(function()
+    if not buyButton then return end
+    
+    resultBox.Text = "👻 بدأ الضغط الشبحى...\n"
+    
+    spawn(function()
+        for i = 1, 1000 do
+            if not isClicking then break end
+            
+            -- ضغط بدون تغيير مرئي
+            pcall(function()
+                -- استدعاء events مباشرة
+                for _, event in pairs(getconnections(buyButton.MouseButton1Click) or {}) do
+                    pcall(function()
+                        event:Fire()
+                    end)
+                end
+                
+                -- إرسال RemoteEvents
+                for _, remote in pairs(game:GetDescendants()) do
+                    if remote:IsA("RemoteEvent") and remote.Name:find("Buy") then
+                        pcall(function()
+                            remote:FireServer({
+                                item = "ChristmasPickaxe",
+                                silent = true
+                            })
+                        end)
+                    end
+                end
+            end)
+            
+            task.wait(0.01) -- 100 ضغطة/ثانية
+        end
+        
+        resultBox.Text = "👻 انتهى الضغط الشبحى!"
+    end)
+end)
+
 print("========================================")
-print("🎄 FREE CHRISTMAS PICKAXE HACK LOADED")
-print("💰 Buy ChristmasPickaxe for 0 ROBUX")
+print("⚡ RAPID CLICK AUTOCLICKER LOADED")
+print("🎯 100 clicks per second")
 print("⚠️  FOR EDUCATIONAL PURPOSES ONLY")
 print("========================================")
